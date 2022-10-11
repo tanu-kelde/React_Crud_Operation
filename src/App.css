@@ -1,10 +1,62 @@
 .App {
   text-align: center;
 }
-
+.card{
+  text-align: center;
+}
+.pi-trash:before {
+  content: "\e93d";
+  color: red;
+}
+.pi-pencil:before {
+  content: "\e942";
+  color: green;
+}
+.icons i{
+  font-size: 23px;
+  margin-left: 20px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.addButton{
+  width: 300px;
+  color: #61dafb;
+}
+.heading{
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.material-icons {
+  font-size: 40px;
+  margin-left: 5px;
+  color: green;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: white;
+}
+.listiconedit {
+  font-size: 25px;
+  margin-left: 10px;
+  color: rgb(104, 202, 226);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+}
+.listicondelete {
+  font-size: 25px;
+  margin-left: 10px;
+  color: red;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,7 +66,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #bf7525;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,3 +88,4 @@
     transform: rotate(360deg);
   }
 }
+

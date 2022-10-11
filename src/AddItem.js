@@ -3,6 +3,8 @@ import React, { Component, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import ListItem from "./ListItem";
+import { InputText } from 'primereact/inputtext';
+import "./App.css";
 
 function AddItem() {
   const [title, setTitle] = useState("");
@@ -16,6 +18,7 @@ function AddItem() {
   }, [isRefresh]);
 
   const handlesubmit = (e) => {
+    console.log("add")
     e.preventDefault();
     if (!data) {
       alert("Please add task");
@@ -26,7 +29,9 @@ function AddItem() {
     } else {
       data.splice(edit, 1, { title, description });
       setIsRefresh(true);
-      console.log({ data });
+      setTitle("");
+      setDescription("");
+      setEdit(null)
     }
   };
   return (
@@ -36,26 +41,27 @@ function AddItem() {
           <Form.Label>Title</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter Title"
+            placeholder="add your Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Desctiption</Form.Label>
+          <Form.Label>Description</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter Desctiption"
+            placeholder="add your description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="success" type="submit" className="addButton">
           Add
         </Button>
       </Form>
+        
 
       <ListItem
         data={data}
@@ -63,6 +69,7 @@ function AddItem() {
         setDescription={setDescription}
         setData={setData}
         setEdit={setEdit}
+        
       />
     </div>
   );

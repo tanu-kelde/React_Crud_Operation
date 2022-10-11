@@ -1,15 +1,15 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import AddItem from './AddItem';
 import AddItem from "./AddItem";
-import ListItem from "./ListItem";
 
 function App() {
   return (
     <div className="App ">
       <div className="App-header ">
-        <h2>React Crud Operation.....</h2>
+     <div className="heading">
+     <h1 className="color:black">To-Do <span>List.....📝</span></h1>
+     </div>
+       
         <AddItem />
       </div>
     </div>
